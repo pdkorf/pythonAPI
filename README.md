@@ -55,3 +55,16 @@ db.mycol.find(
 
 db.mycol.find({$and:[{"likes:{$gte:50}},{"title": "MongoDB overiew"}]}).pretty()
 ```
+
+## OR in MongoDB
+```js
+db.mycol.find(
+  {
+    $or: [
+      {key1: value1},{key2: value2}
+    ]
+  }
+).pretty()
+
+db.mycol.find({$or:[{"likes:{$gte:50}},{"title": "MongoDB overiew"}]}).pretty()
+```
