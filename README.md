@@ -68,3 +68,55 @@ db.mycol.find(
 
 db.mycol.find({$or:[{"likes:{$gte:50}},{"title": "MongoDB overiew"}]}).pretty()
 ```
+
+### Updating documents in MongoDB
+Update single document
+```js
+db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATE)
+
+d.mycolupdate({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Tutorial'}})
+```
+
+Update multiple documents
+```js
+db.mycol.update({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Tutorial'}},{multi:true})
+```
+
+### Deleting dpcuments
+```js
+db.COLLECTION_NAME.remove(DELTION_CRITERIA)
+
+// Optional, if true remove only 1 document
+justOne = True 
+
+db.mycol.remove({'title': 'MongoDB Overview'})
+```
+
+### Projection
+Selecting only the necessary data,
+After find finds data, only return the data i really need. Instead of returning all the data.
+Like only 'name' and 'age', not 'adress'
+
+```js
+db.COLLECTION_NAME.find({},{KEY:1})
+
+// show title, don't return the ID
+db.mycol.find({},{'title:1,_id:0})  
+```
+
+### Limiting records
+Just 100 records instead of all
+
+```js
+db.COLLECTION_NAME.find().limit(NUMBER)
+
+db.mycol.find({}.{'title':1,id:0}).limit(1)
+```
+
+### Sorting Documents
+```js
+db.COLLECTION_NAME.find().sort(KEY:1)
+
+db.mycol.find().sort({'likes':1})
+```
+
