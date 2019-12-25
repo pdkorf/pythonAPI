@@ -1,0 +1,89 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "+, -, *, / . turning your API call into a calculator. In case of division 0 is forbidden.",
+    "version" : "v1",
+    "title" : "First API project "
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/DezeIsVanMij/project1/v1",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/add/" : {
+      "post" : {
+        "summary" : "Add 2 numbers",
+        "description" : "To add 2 numbers provide header with value X and Y. Both must be an integer.",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "301" : {
+            "description" : "Missing value"
+          },
+          "404" : {
+            "description" : "Some error"
+          }
+        }
+      }
+    },
+    "/subtract/" : {
+      "post" : {
+        "summary" : "Subtract two numbers",
+        "description" : "To subtract 2 numbers provide header with value X and Y. Both must be an integer.",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "301" : {
+            "description" : "Missing value"
+          },
+          "404" : {
+            "description" : "Some error"
+          }
+        }
+      }
+    },
+    "/devide/" : {
+      "post" : {
+        "summary" : "Devision of two numbers",
+        "description" : "To devide 2 numbers provide header with value X and Y. Both must be an integer. The use of 0 is forbidden",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "301" : {
+            "description" : "Missing value"
+          },
+          "302" : {
+            "description" : "Missing value"
+          },
+          "404" : {
+            "description" : "Some error"
+          }
+        }
+      }
+    },
+    "/mulitply/" : {
+      "post" : {
+        "summary" : "Multiply two numbers",
+        "description" : "To multiply 2 numbers provide header with value X and Y. Both must be an integer.",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "301" : {
+            "description" : "Missing value"
+          },
+          "404" : {
+            "description" : "Some error"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}
