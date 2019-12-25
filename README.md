@@ -9,10 +9,12 @@ During the tutorial multiple techniques are being used. The links below give mor
 - [Flask](https://www.fullstackpython.com/flask.html)
 - [Install MongoDB on ubuntu in virtualbox](https://websiteforstudents.com/install-mongodb-on-ubuntu-18-04-lts-beta-server/)
 - [Install docker engine](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-⋅- [Install docker compose](https://docs.docker.com/compose/install/)
--
+- [Install docker compose](https://docs.docker.com/compose/install/)
+- [Mongo Cheat sheet](https://github.com/pdkorf/pythonAPI/blob/master/ReferenceCards15-PDF.pdf)
+- [Docker Cheat sheet](https://github.com/pdkorf/pythonAPI/blob/master/docker-cheat-sheet.pdf)
 
 # Handy commands
+## Start Mongo in virtualBox
 ```bash
 sudo systemctl stop mongod.service
 sudo systemctl start mongod.service
