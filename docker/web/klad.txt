@@ -1,0 +1,85 @@
+FROM python:3
+# install ubuntu and python 3
+
+# declare the default working directory
+WORKDIR /usr/src/app
+
+# copy requirements.txt to the working directory
+COPY requirements.txt .
+
+# clear the cache and install the libraries declared in requirements
+RUN pip install --no-cache-dir -r requirements.txt
+
+# copy all local files in current directory to the working directory
+COPY . .
+
+# hey python, run this app.py on the new machine
+CMD ["python", "app.py"]
+
+
+
+
+
+1  sudo apt update
+2  sudo apt upgrade
+3  sudo apt install build-essential dkms linux-headers-$(uname -r)
+4  cd Bureaublad/
+5  ls
+6  cd tutorial/
+7  ls
+8  atom app.py
+9  sudo atom app.py
+10  export FLASK_APP=app.py
+11  run Flask
+12  run flask
+13  flask run
+14  cd Bureaublad/
+15  ls
+16  cd tutorial/
+17  ls
+18  atom app.py
+19  sudo atom app.py
+20  flask run
+21  ls
+22  cd Bureaublad/
+23  ls
+24  cd tutorial/
+25  ls
+26  flask run
+27  cd Bureaublad/
+28  cd tutorial/
+29  ls
+30  atom app.py
+31  sudo atom app.py
+32  flask run
+33  cd Bureaublad/
+34  cd tutorial/
+35  pip3 install flask-restful
+36  python3
+37  sudo atom app.py
+38  flask run
+39  sudo apt-get update
+40  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+41  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+42  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+43     $(lsb_release -cs) \
+44     stable"
+45  sudo apt-get update
+46  sudo apt-get install docker-ce docker-ce-cli containerd.io
+47  sudo docker run hello-world
+48  sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+49  sudo chmod +x /usr/local/bin/docker-compose
+50  docker-compose --version
+51  cd Bureaublad/
+52  cd tutorial/
+53  ls
+54  docker-compose build
+55  sudo docker-compose build
+56  docker-compose up
+57  sudo docker-compose up
+58  cd web/
+59  sudo atom app.py
+60  cd ..
+61  sudo docker-compose build
+62  sudo docker-compose up
+63  history
