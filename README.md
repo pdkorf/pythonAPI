@@ -21,3 +21,37 @@ sudo systemctl start mongod.service
 sudo systemctl enable mongod.service
 sudo systemctl status mongod
 ```
+
+## Mongo tips
+Pretty way of showing a mongo find query
+```js
+db.mycol.find({}).pretty()
+```
+
+Return just one resutl, even when there are multiple 'Jack's' 
+```js
+db.mycol.findOne({"name":"Jack"}).pretty()
+```
+
+Operation | Syntax
+------------ | -------------
+Equality | ```{<key>:<value>}```
+Less than | ```{<key>:{$lt:<value>}}```
+Less Than Equals | ```{<keu>:{$lte:<value>}}```
+------------ | -------------
+Greater Than | ```{<key>:{$tg:<value>}}```
+Greater than Equals | ```{<key>:{$gte:<value>}}```
+Not Equals | ```{<key>:{$ne:<values>}}```
+
+## AND in MongoDB
+```js
+db.mycol.find(
+  {
+    $and: [
+      {key1: value1},{key2: value2}
+    ]
+  }
+).pretty()
+
+db.mycol.find({$and:[{"likes:{$gte:50}},{"title": "MongoDB overiew"}]}).pretty()
+```
