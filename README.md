@@ -82,7 +82,7 @@ Update multiple documents
 db.mycol.update({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Tutorial'}},{multi:true})
 ```
 
-### Deleting dpcuments
+### Deleting documents
 ```js
 db.COLLECTION_NAME.remove(DELTION_CRITERIA)
 
@@ -116,6 +116,8 @@ db.mycol.find({}.{'title':1,id:0}).limit(1)
 ### Sorting Documents
 ```js
 db.COLLECTION_NAME.find().sort(KEY:1)
+// 1 = ascending
+//0 = descending
 
 db.mycol.find().sort({'likes':1})
 ```
