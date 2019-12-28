@@ -12,6 +12,7 @@ During the tutorial multiple techniques are being used. The links below give mor
 - [Install docker compose](https://docs.docker.com/compose/install/)
 - [Mongo Cheat sheet](https://github.com/pdkorf/pythonAPI/blob/master/ReferenceCards15-PDF.pdf)
 - [Docker Cheat sheet](https://github.com/pdkorf/pythonAPI/blob/master/docker-cheat-sheet.pdf)
+- [Hashing for Python](https://www.mindrot.org/projects/py-bcrypt/)
 
 ## Handy commands
 ### Start Mongo in virtualBox
@@ -134,3 +135,22 @@ Resource | Address | Protocol | Param | Response + status codes
 Register User | /register | POST | Username: string<br> password : string | 200 OK
 Store Sentence | /store | POST | Username: string<br> password: string<br> sentence: string | 200 ok<br> 301 out of tokens<br> 302 invalid Username or Password
 Retrieve Sentence | /get | GET | Username: string<br> password: string | 200 ok<br> 301 out of tokens<br> 302 invalid Username or Password
+
+## Hashing for python
+```python
+import bcrypt
+
+# Hash a password for the first time, with a randomly-generated salt
+hashed = bcrypt.hashpw(password, bcrypt.gensalt())
+
+# gensalt's log_rounds parameter determines the complexity.
+# The work factor is 2**log_rounds, and the default is 12
+hashed = bcrypt.hashpw(password, bcrypt.gensalt(10))
+
+# Check that an unencrypted password matches one that has
+# previously been hashed
+if bcrypt.hashpw(password, hashed) == hashed:
+        print "It matches"
+else:
+        print "It does not match"
+```
