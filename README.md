@@ -134,7 +134,7 @@ Resource | Address | Protocol | Param | Response + status codes
 ------------ | ------------- | ------------- | ------------- | -------------
 Register User | /register | POST | Username: string<br> password : string | 200 OK
 Store Sentence | /store | POST | Username: string<br> password: string<br> sentence: string | 200 ok<br> 301 out of tokens<br> 302 invalid Username or Password
-Retrieve Sentence | /get | GET | Username: string<br> password: string | 200 ok<br> 301 out of tokens<br> 302 invalid Username or Password
+Retrieve Sentence | /get | POST | Username: string<br> password: string | 200 ok<br> 301 out of tokens<br> 302 invalid Username or Password
 
 ## Hashing for python
 ```python
